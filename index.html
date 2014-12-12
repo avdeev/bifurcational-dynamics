@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="http://alexey-avdeev.com/">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/application.css" />
+  <script type="text/javascript" src="vendor/underscore-min.js"></script>
+  <script type="text/javascript" src="vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/highcharts.js"></script>
+  <script type="text/javascript" src="vendor/exporting.js"></script>
+  <script type="text/javascript" src="js/lib.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
+  <title>Исследование динамики виброударного механизма с кривошипно-шатунным возбудителем колебаний</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Переключить навигацию</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Исследование динамики виброуда...</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="index.html">График движения</a>
+          </li>
+          <li>
+            <a href="bifurcational.html">Бифуркационная диаграмма</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <h1>Параметры</h1>
+        <form role="form" class="form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-6 col-sm-offset-6">
+              <button type="button" class="btn btn-default method">Старт</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">Шаг метода</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="h" value="0.2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">x(0)</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="x0" value="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">x'(0)</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="x0_dot" value="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">t0</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="t0" value="0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">tn</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="tn" value="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">mu</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="mu" value="0.12">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">p</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="p" value="0.41">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">R</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="R" value="0.5">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">N</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="N" value="3">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">εi</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="epsilon" value="0.018 0 0.02">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">γi</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="gamma" value="1 3 3">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">φi</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="phi" value="0 0.2 1.1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-6">λi</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="lambda" value="0.1 0.2 0.3">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-9">
+        <h1>График движения</h1>
+        <div id="chart"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
